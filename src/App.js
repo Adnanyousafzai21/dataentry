@@ -77,18 +77,34 @@ function App() {
     <div>
       <div className="costiner">
         <div className="form_box">
-          <div className="box" style={{borderRadius:"3px"}}>
+          <div className="box" style={{ borderRadius: "3px" }}>
             <ul>
               <li>Name</li>
               <li>Title</li>
-              <li style={{overflow:"hidden"}}>Discrption</li>
-              <div className="delete" aria-disabled onClick={()=>{alert("You can only able to delte the data you have Added")}}>Delete</div>
-              <div className="adit" aria-disabled onClick={()=>{alert("You can only able to edit the data you have Added")}}>Edit</div>
-</ul>
+              <li style={{ overflow: "hidden" }}>Discrption</li>
+              <div
+                className="delete"
+                aria-disabled
+                onClick={() => {
+                  alert("You can only able to delte the data you have Added");
+                }}
+              >
+                Delete
+              </div>
+              <div
+                className="adit"
+                aria-disabled
+                onClick={() => {
+                  alert("You can only able to edit the data you have Added");
+                }}
+              >
+                Edit
+              </div>
+            </ul>
           </div>
           {addItem.map((val) => {
             return (
-              <div className="box" key={val.id} >
+              <div className="box" key={val.id}>
                 <ul>
                   <li>{val.name.name}</li>
                   <li>{val.name.title}</li>
@@ -122,8 +138,8 @@ function App() {
                 onChange={update}
               />
             </div>
-            <div className="input-field">
-              <textarea 
+            <div className="input-field"> 
+              <textarea
                 id=""
                 cols="25"
                 rows="3"
@@ -133,7 +149,6 @@ function App() {
                 onChange={update}
               ></textarea>
             </div>
-
             <div className="adit" onClick={Addnote}>
               {text}
             </div>
